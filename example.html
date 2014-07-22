@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>jQuery Drag&Drop Plugin Example</title>
+		<meta charset="utf-8" />
+		<meta name="author" content="Choko" />
+		<meta name="license" content="GPLv3" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="./jquery.dd.js"></script>
+		<style type="text/css">
+			body {
+				font-family: sans-serif;
+			}
+			#ddsource, #ddtarget {
+				width: 40%;
+				height: 40%;
+				padding: 10px;
+				margin: 15px;
+				background-color: #fafafa;
+			}
+			.example-element {
+				background-color: #eee;
+				padding: 15px;
+			}
+			#log {
+				font-family: monospace;
+				background-color: #121;
+				color: #fdfdfd;
+				padding: 10px;
+				width: 80%;
+				height: 400px;
+				overflow-x: hidden;
+				overflow-y: auto;
+				border-radius: 2px;
+				box-shadow: 4px 4px 12px #aaaaff;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="ddsource" data-dd="source">
+				<div style="font-weight: bold; text-align: center;" data-dd-status="fixed">Source</div>
+				<div class="example-element">Element 1</div>
+				<div class="example-element">Element 2</div>
+				<div class="example-element" data-dd-status="fixed">Element 3</div>
+				<div class="example-element">Element 4</div>
+			</div>
+			<div id="ddtarget" data-dd="target" data-dd-reordable="true">
+				<div style="font-weight: bold; text-align: center;" data-dd-status="fixed">Targets</div>
+				<div class="example-element">Element 5</div>
+				<div class="example-element">Element 6</div>
+			</div>
+		</div>
+		<div id="log" dd-role="log">
+
+		</div>
+	</body>
+</html>
